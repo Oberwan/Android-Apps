@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragment_shopping_list">
+
+    <fragment
+        android:id="@+id/fragment_shopping_list"
+        android:name="com.example.shoppinglist.mainlist.ItemFragment"
+        android:label="@string/main_fragment"
+        tools:layout="@layout/fragment_shopping_list">
+
+        <action
+            android:id="@+id/action_shoppinglist_to_categories"
+            app:destination="@id/fragment_categories"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_right" />
+<!--        <argument-->
+<!--            android:name="itemId"-->
+<!--            app:argType="string"/>-->
+        <action
+            android:id="@+id/action_shoppinglist_to_usuallist"
+            app:destination="@id/fragment_usual_list"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_right" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/fragment_categories"
+        android:name="com.example.shoppinglist.category.CategoryFragment"
+        android:label="@string/cat_fragment"
+        tools:layout="@layout/fragment_categories">
+        <action
+            android:id="@+id/action_categoryFragment_to_shoppingListFragment"
+            app:destination="@id/fragment_shopping_list"
+            app:enterAnim="@anim/slide_in_left"
+            app:popEnterAnim="@anim/slide_in_left" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_usual_list"
+        android:name="com.example.shoppinglist.usuallist.UsualFragment"
+        android:label="@string/usual_fragment"
+        tools:layout="@layout/fragment_categories">
+<!--        <argument-->
+<!--            android:name="itemId"-->
+<!--            app:argType="string"/>-->
+        <action
+            android:id="@+id/action_usuallist_to_shoppinglist"
+            app:destination="@id/fragment_shopping_list"
+            app:enterAnim="@anim/slide_in_left"
+            app:popEnterAnim="@anim/slide_in_left" />
+
+    </fragment>
+</navigation>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="catViewModel"
+            type="com.example.shoppinglist.category.CategoryViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".category.CategoryFragment">
+
+        <TextView
+            android:id="@+id/alpha_sort_enabled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="@{catViewModel.isWarningVisible ? View.VISIBLE : View.GONE}"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:background="@color/purple_500"
+            android:textStyle="bold|italic"
+            android:layout_marginTop="1dp"
+            android:paddingStart="@dimen/art_padding"
+            android:paddingEnd="@dimen/art_padding"
+            android:text="@string/warning_activate_custom"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/category_list"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/alpha_sort_enabled"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/back_button"/>
+<!--
+
+tools:listitem="@layout/category_item"-->
+<!--        app:listDataCat="@{catViewModel.categories}"-->
+
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fab_margin"
+            android:onClick="@{() -> catViewModel.onBackClicked()}"
+            android:text="@string/back_to_shopping_list"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.example.shoppinglist.floatingbutton.MovableFloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:contentDescription="@string/add_art_btn"
+            android:onClick="@{() -> catViewModel.onFabClicked()}"
+            app:tint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:srcCompat="@android:drawable/ic_input_add" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

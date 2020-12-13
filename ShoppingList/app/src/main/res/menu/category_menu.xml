@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_sort_cats"
+        android:orderInCategory="1"
+        android:title="@string/sort_articles"
+        app:showAsAction="ifRoom" >
+        <menu>
+            <item
+                android:id="@+id/action_sort_alpha"
+                android:orderInCategory="1"
+                android:title="@string/sort_alpha"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/action_custom_sort"
+                android:orderInCategory="2"
+                android:title="@string/sort_custom"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/action_empty_list"
+        android:orderInCategory="30"
+        android:title="@string/empty_category_list"
+        app:showAsAction="ifRoom" />
+
+</menu>

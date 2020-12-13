@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_sort_articles"
+        android:orderInCategory="1"
+        android:title="@string/sort_articles"
+        app:showAsAction="ifRoom" >
+        <menu>
+            <item
+                android:id="@+id/action_sort_by_cat"
+                android:orderInCategory="1"
+                android:title="@string/sort_bycat_button"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/action_sort_by_item"
+                android:orderInCategory="2"
+                android:title="@string/sort_byitem_button"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/action_add_all"
+        android:orderInCategory="20"
+        android:title="@string/add_all_to_shopping_list"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_empty_list"
+        android:orderInCategory="30"
+        android:title="@string/empty_usual_list"
+        app:showAsAction="never" />
+
+<!--    <item
+        android:id="@+id/action_show_cat"
+        android:checkable="true"
+        android:checked="true"
+        android:orderInCategory="99"
+        android:title="@string/show_categories"
+        app:showAsAction="never" />-->
+
+</menu>

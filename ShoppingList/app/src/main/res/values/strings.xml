@@ -1,0 +1,119 @@
+<resources>
+    <string name="app_name">Shopping List</string>
+    <string name="main_fragment">MainFragment</string>
+    <string name="add_art_btn">Add Item</string>
+    <string name="add_art_msg">Add a new item</string>
+    <string name="add_art_prmpt_msg">What item do you want to add?</string>
+    <string name="add_art_prmpt_title">Add a new Item</string>
+    <string name="add_art_prmpt_add">\"Item to add: \"</string>
+    <string name="prmpt_cancel">Cancel</string>
+    <string name="edit_art_prmpt_msg">What do you want to modify?</string>
+    <string name="edit_art_prmpt_title">Edit an Item</string>
+    <string name="del_art">Delete</string>
+    <string name="art_details">Edit Item</string>
+    <string name="edit_button">Edit…</string>
+    <string name="sort_articles">Sort…</string>
+    <string name="empty_shopping_list">Empty shopping list…</string>
+    <string name="usual_arts">Usual List</string>
+    <string name="clear_checked">Clear checked…</string>
+    <string name="undo">UNDO</string>
+    <string name="shopping_list">Shopping List</string>
+    <string name="empty_usual_list">Empty Usual List…</string>
+    <string name="pls_non_empty">Please enter a non-empty value</string>
+    <string name="add">Add</string>
+    <string name="article">Article</string>
+    <string name="category">Categories</string>
+    <string name="art_head">Article :</string>
+    <string name="cat_head">Category :</string>
+    <string name="divers_cat">Miscellaneous</string>
+    <string name="art_qty">Quantity :</string>
+    <string name="default_art_nb">1</string>
+    <string name="art_det_dial_title">Article details</string>
+    <string name="ok">OK</string>
+    <string name="del_all_title">Delete All</string>
+    <string name="del_all_msg">Are you sure you want to delete every entry?</string>
+    <string name="confirm">Confirm</string>
+    <string name="del_chk_title">Delete Checked</string>
+    <string name="del_chk_msg">Are you sure you want to delete all checked items?</string>
+    <string name="manage_categories">Category List</string>
+    <string name="manage_cat_title">Manage Categories</string>
+    <string name="empty_category_list">Delete Unused Categories…</string>
+    <string name="category_hint">Category</string>
+    <string name="new_cat_title">Add a New Category</string>
+    <string name="new_cat_msg">What category do you want to add?</string>
+    <string name="entry_already_exists">Entry already exists!</string>
+    <string name="cat_used_toast">Cannot delete: Category used in the shopping list</string>
+    <string name="cant_del_used_cat">Cannot delete categories used by another list</string>
+    <string name="edit_cat_title">Edit Category</string>
+    <string name="is_not_int">Quantity is not valid!</string>
+    <string name="usual_list_title">Usual Item List</string>
+    <string name="already_in_slist_title">Item also exists in Shopping List</string>
+    <string name="already_in_slist_msg">Update item in Shopping List too?</string>
+    <string name="art_put_in_slist">Item placed in the shopping list</string>
+    <string name="art_del_from_slist">Item removed from shopping list</string>
+    <string name="no">No</string>
+    <string name="sort_bycat_button">By category</string>
+    <string name="sort_byitem_button">By item</string>
+    <string name="add_all_to_shopping_list">Add list to Shopping List</string>
+    <string name="already_all_in_slist">There is no item left to put in the Shopping List</string>
+    <string name="item_put_in_cart">Item put in cart</string>
+    <string name="item_del_from_cart">Item removed from cart</string>
+    <string name="yes">Yes</string>
+    <string name="cat_fragment">CategoryFragment</string>
+    <string name="usual_fragment">UsualFragment</string>
+    <string name="drawer_fragment">Drawer Fragment</string>
+    <string name="edit_cat_message">Replace category name with:</string>
+    <string name="cant_del_all_used">All categories are currently used in another list</string>
+    <string name="prmpt_del_unused_title">Delete All Unused</string>
+    <string name="prmpt_del_unused_msg">Are you sure you want to delete every unused category?</string>
+    <string name="back_to_shopping_list">&lt; Back to Shopping List</string>
+    <string name="cant_propagate">Can\'t propagate: updated item already exists in the Shopping List</string>
+    <string name="send_list_via_sms">Send Remaining via SMS…</string>
+    <string name="sens_sms_title">Send via SMS?</string>
+    <string name="sens_sms_msg">You are going to be redirected to your SMS app</string>
+    <string name="sms_no_data_to_send">No data to send!</string>
+    <string name="sort_custom">Custom sort</string>
+    <string name="sort_alpha">Alphabetically</string>
+    <string name="warning_activate_custom">Sorting alphabetically. To enable drag and drop, choose Custom Sort</string>
+    <string name="dismiss_snackbar">DISMISS</string>
+    <string-array name="unit_array">
+        <item></item>
+        <item>kg</item>
+        <item>g</item>
+        <item>pack(s)</item>
+        <item>L</item>
+        <item>mL</item>
+    </string-array>
+    <string-array name="pre_pop_cat">
+        <item>Misc.</item>
+        <item>Fruits &amp; Vegetables</item>
+        <item>Meat</item>
+        <item>Fish</item>
+        <item>Bakery</item>
+        <item>Refrigerated Food</item>
+        <item>Frozen Food</item>
+        <item>Dried Fruits, Nuts &amp; Seeds</item>
+        <item>Biscuits</item>
+        <item>Sweets</item>
+        <item>Cereals</item>
+        <item>Tins, Cans</item>
+        <item>Cooking Ingredients</item>
+        <item>World Food</item>
+        <item>Health &amp; Beauty</item>
+        <item>Desserts</item>
+        <item>Pets</item>
+        <item>Household</item>
+        <item>DIY</item>
+        <item>Home</item>
+        <item>Baby</item>
+        <item>Snacks</item>
+        <item>Garden &amp; Outdoor</item>
+        <item>Entertainment</item>
+        <item>Drinks</item>
+    </string-array>
+    <string-array name="pre_pop_item">
+        <item>Wholegrain bread</item>
+        <item>Bakery</item>
+        <item>500 g</item>
+    </string-array>
+</resources>

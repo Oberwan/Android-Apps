@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/art_choice"
+        android:hint="@string/article"
+        android:inputType="textCapSentences"
+        android:minLines="2"
+        android:layout_marginStart="@dimen/layout_margin"
+        android:layout_marginEnd="@dimen/layout_margin"
+        android:layout_marginTop="@dimen/layout_margin"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/layout_margin">
+
+        <TextView
+            android:id="@+id/cat_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@string/cat_head" />
+
+        <EditText
+            android:id="@+id/category"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textCapSentences"
+            android:layout_gravity="center"
+            android:selectAllOnFocus="true"
+            android:layout_marginStart="@dimen/layout_margin"
+            app:layout_constraintStart_toEndOf="@id/cat_head"
+            app:layout_constraintEnd_toStartOf="@id/cat_dropdown"
+            app:layout_constraintTop_toTopOf="parent"/>
+<!--            android:text="@string/divers_cat" />-->
+
+        <Spinner
+            android:id="@+id/cat_dropdown"
+            android:layout_width="@dimen/cat_dropdown_size"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown"
+            android:layout_marginStart="@dimen/layout_margin"
+            android:layout_marginEnd="@dimen/layout_margin"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:layout_marginStart="@dimen/layout_margin"
+        android:layout_marginLeft="@dimen/layout_margin">
+
+        <TextView
+            android:id="@+id/nb_head"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="@string/art_qty" />
+
+        <EditText
+            android:id="@+id/numberPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:inputType="numberDecimal"
+            android:digits="0123456789.,"
+            android:text="@string/default_art_nb"
+            android:selectAllOnFocus="true"
+            android:layout_marginStart="@dimen/layout_margin"/>
+
+        <Spinner
+            android:id="@+id/qty_dropdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown"
+            android:entries="@array/unit_array"
+            android:layout_marginStart="@dimen/layout_margin"
+            android:layout_marginEnd="@dimen/layout_margin"
+            />
+
+        <!--<NumberPicker
+            android:id="@+id/numberPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />-->
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.widget.CompoundButton" />
+        <import type="android.graphics.Typeface"/>
+        <variable
+            name="item"
+            type="com.example.shoppinglist.db.ShoppingItem"/>
+        <variable
+            name="itemViewModel"
+            type="com.example.shoppinglist.mainlist.ItemViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@{item.inCart == 1 ? @color/green : @color/white}">
+<!--
+        android:layout_gravity="center_vertical"-->
+
+
+
+        <TextView
+            android:id="@+id/cat_in_list"
+            android:background="@color/purple_500"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/layout_margin"
+            android:textSize="@dimen/secondary_text_size"
+            app:itemCategory="@{item}"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!--android:visibility="invisible"/>-->
+        <!--
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"-->
+        <CheckBox
+            android:id="@+id/article"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/purple_500"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:maxLines="1"
+            app:itemName="@{item}"
+            android:paddingStart="@dimen/art_padding"
+            android:scrollHorizontally="true"
+            android:textSize="@dimen/primary_text_size"
+            android:onClick="@{(view) -> itemViewModel.onItemClicked(item.itemId, ((CompoundButton)view).isChecked())}"            app:layout_constraintEnd_toStartOf="@id/art_qty"
+            android:checked="@{item.inCart == 1}"
+            app:layout_constraintRight_toLeftOf="@id/art_qty"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cat_in_list"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <!--app:layout_constraintEnd_toStartOf="@id/art_qty"
+        app:layout_constraintLeft_toLeftOf="@id/art_qty"
+        app:layout_constraintLeft_toRightOf="@id/cat_in_list"
+        app:layout_constraintStart_toEndOf="@id/cat_in_list"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"-->
+        <TextView
+            android:id="@+id/art_qty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/layout_margin"
+            android:layout_marginEnd="12dp"
+            android:textSize="@dimen/secondary_text_size"
+            android:gravity="center"
+            android:textColor="@color/black"
+            app:itemQuantity="@{item}"
+            app:layout_constraintBottom_toBottomOf="@id/article"
+            app:layout_constraintEnd_toStartOf="@id/article_details"
+            app:layout_constraintRight_toLeftOf="@id/article_details"
+            app:layout_constraintTop_toBottomOf="@id/cat_in_list" />
+
+
+        <!--    app:layout_constraintTop_toTopOf="parent"-->
+
+        <Button
+            android:id="@+id/article_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:text="@string/edit_button"
+            android:layout_marginEnd="@dimen/space_after_button"
+            android:contentDescription="@string/art_details"
+            android:onClick="@{() -> itemViewModel.onEditClicked(item)}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cat_in_list" />
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/article_delete"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginEnd="@dimen/layout_margin"-->
+<!--            android:layout_marginRight="@dimen/layout_margin"-->
+<!--            android:background="@color/purple_500"-->
+<!--            android:contentDescription="@string/del_art"-->
+<!--            android:onClick="@{() -> itemViewModel.onDeleteClicked(item)}"-->
+<!--            android:src="@android:drawable/ic_delete"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintRight_toRightOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/cat_in_list" />-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
