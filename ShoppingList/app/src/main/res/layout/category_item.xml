@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:textColor="@color/black"
-            android:buttonTint="@color/purple_500"
+            android:buttonTint="@color/blue_500"
             android:ellipsize="end"
             android:maxLines="1"
             app:categoryId="@{cat}"

@@ -15,7 +15,6 @@ import com.google.android.material.snackbar.Snackbar
 import java.lang.IllegalStateException
 import java.lang.StringBuilder
 
-
 const val ALREADY_EXISTS = 2
 const val VALID = 1
 const val EMPTY_STRING = 0
@@ -33,6 +32,9 @@ const val SORT_CUSTOM = 0
 const val SORT_ALPHA = 1
 var catSortType = SORT_CUSTOM
 
+
+const val RED_COLOR = 0xFFCF0000.toInt()
+const val TEAL_COLOR = 0xFF03DAC5.toInt()
 
 //Replaced with Snackbar
 fun generateToast(context: Context, message: CharSequence?, longDuration: Boolean) {
@@ -67,7 +69,7 @@ fun Fragment.generateUndoSnackbar(message: String, viewModel: BaseViewModel){
         Snackbar.make(
                 this.requireActivity().findViewById(android.R.id.content),
                 message,
-                Snackbar.LENGTH_LONG
+                4000//Snackbar.LENGTH_LONG
         ).setAction(getString(R.string.undo)){ //if undo clicked, re-add the item in the list
                     viewModel.undoDelete()
         }.addCallback(object : Snackbar.Callback() {

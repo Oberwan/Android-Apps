@@ -22,7 +22,7 @@
             android:visibility="@{catViewModel.isWarningVisible ? View.VISIBLE : View.GONE}"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:background="@color/purple_500"
+            android:background="@color/blue_500"
             android:textStyle="bold|italic"
             android:layout_marginTop="1dp"
             android:paddingStart="@dimen/art_padding"

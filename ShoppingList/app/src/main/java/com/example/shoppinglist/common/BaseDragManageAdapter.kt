@@ -6,6 +6,7 @@ import android.util.Log
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.example.shoppinglist.RED_COLOR
 import javax.security.auth.login.LoginException
 
 /**
@@ -13,6 +14,8 @@ import javax.security.auth.login.LoginException
  */
 class BaseDragManageAdapter(var viewModel: BaseViewModel, var adapter: ListAdapter<Any, RecyclerView.ViewHolder>, dragDirs: Int, swipeDirs: Int)
     : ItemTouchHelper.SimpleCallback(dragDirs, swipeDirs){
+
+
     override fun onMove(
         recyclerView: RecyclerView,
         viewHolder: RecyclerView.ViewHolder,
@@ -38,7 +41,7 @@ class BaseDragManageAdapter(var viewModel: BaseViewModel, var adapter: ListAdapt
 
         with(viewHolder?.itemView?.background){
             if (this is ColorDrawable && this.color == Color.WHITE)
-                viewHolder?.itemView?.setBackgroundColor(Color.RED)
+                viewHolder?.itemView?.setBackgroundColor(RED_COLOR)
         }
     }
 
@@ -53,7 +56,7 @@ class BaseDragManageAdapter(var viewModel: BaseViewModel, var adapter: ListAdapt
         super.clearView(recyclerView, viewHolder)
 
         with(viewHolder.itemView.background){
-            if (this is ColorDrawable && this.color == Color.RED)
+            if (this is ColorDrawable && this.color == RED_COLOR)
                 viewHolder.itemView.setBackgroundColor(Color.WHITE)
         }
     }

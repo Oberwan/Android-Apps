@@ -7,6 +7,8 @@ import android.util.Log
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearSmoothScroller
 import androidx.recyclerview.widget.RecyclerView
+import com.example.shoppinglist.RED_COLOR
+import com.example.shoppinglist.TEAL_COLOR
 import com.example.shoppinglist.db.Category
 import java.util.*
 
@@ -133,9 +135,9 @@ class CatDragManageAdapter(var categoryViewModel: CategoryViewModel, var adapter
     override fun onSelectedChanged(viewHolder: RecyclerView.ViewHolder?, actionState: Int) {
         viewHolder?.let {
             if (actionState == ItemTouchHelper.ACTION_STATE_DRAG)
-                it.itemView.setBackgroundColor(0xAABB86FC.toInt())
+                it.itemView.setBackgroundColor(TEAL_COLOR)
             if (actionState == ItemTouchHelper.ACTION_STATE_SWIPE)
-                it.itemView.setBackgroundColor(Color.RED)
+                it.itemView.setBackgroundColor(RED_COLOR)
         }
         super.onSelectedChanged(viewHolder, actionState)
     }

@@ -25,7 +25,7 @@
         android:id="@+id/action_add_all"
         android:orderInCategory="20"
         android:title="@string/add_all_to_shopping_list"
-        app:showAsAction="never" />
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/action_empty_list"
