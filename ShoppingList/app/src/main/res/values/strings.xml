@@ -76,6 +76,11 @@
     <string name="sort_alpha">Alphabetically</string>
     <string name="warning_activate_custom">Sorting alphabetically. To enable drag and drop, choose Custom Sort</string>
     <string name="dismiss_snackbar">DISMISS</string>
+    <string name="item_deleted_info">Item %1$s has been deleted</string>
+    <string name="cat_deleted_info">Category %1$s has been deleted</string>
+    <string name="language">Language</string>
+    <string name="en_lg_title">EN</string>
+    <string name="fr_lg_title">FR</string>
     <string-array name="unit_array">
         <item></item>
         <item>kg</item>

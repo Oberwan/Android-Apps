@@ -96,7 +96,7 @@ class ItemFragment : BaseFragment() {
 
         itemViewModel.lastDeleted.observe(viewLifecycleOwner, Observer {
             it?.let {
-                generateUndoSnackbar("Item ${it.name} has been deleted", itemViewModel)
+                generateUndoSnackbar(getString(R.string.item_deleted_info, it.name), itemViewModel)
             }
         })
 

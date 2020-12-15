@@ -3,7 +3,6 @@ package com.example.shoppinglist.category
 
 import android.content.Context
 import android.graphics.Color
-import android.util.Log
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearSmoothScroller
 import androidx.recyclerview.widget.RecyclerView

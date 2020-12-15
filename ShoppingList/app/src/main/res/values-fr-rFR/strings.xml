@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Shopping List</string>
+    <string name="main_fragment">MainFragment</string>
+    <string name="add_art_btn">Ajouter un article.</string>
+    <string name="add_art_msg">Ajout d\'un article</string>
+    <string name="add_art_prmpt_msg">Quel article souhaitez vous ajouter\u00A0?</string>
+    <string name="add_art_prmpt_title">Ajout d\'un article</string>
+    <string name="add_art_prmpt_add">\"Article à ajouter: \"</string>
+    <string name="prmpt_cancel">Annuler</string>
+    <string name="edit_art_prmpt_msg">Que souhaitez-vous modifier\u00A0?</string>
+    <string name="edit_art_prmpt_title">Éditer un article</string>
+    <string name="del_art">Supprimer</string>
+    <string name="art_details">Éditer l\'article</string>
+    <string name="edit_button">Éditer…</string>
+    <string name="sort_articles">Tri…</string>
+    <string name="empty_shopping_list">Effacer la liste…</string>
+    <string name="usual_arts">Liste habituelle</string>
+    <string name="clear_checked">Supprimer les articles cochés…</string>
+    <string name="undo">ANNULER</string>
+    <string name="shopping_list">Liste de courses</string>
+    <string name="empty_usual_list">Effacer la liste…</string>
+    <string name="pls_non_empty">Veuillez renseigner les champs Article et Catégorie.</string>
+    <string name="add">Ajouter</string>
+    <string name="article">Article</string>
+    <string name="category">Catégories</string>
+    <string name="art_head">Article :</string>
+    <string name="cat_head">Catégorie :</string>
+    <string name="divers_cat">Divers</string>
+    <string name="art_qty">Quantité :</string>
+    <string name="default_art_nb">1</string>
+    <string name="art_det_dial_title">Détails de l\'article</string>
+    <string name="ok">OK</string>
+    <string name="del_all_title">Tout supprimer</string>
+    <string name="del_all_msg">Voulez-vous vraiment supprimer tous les articles de cette liste\u00A0?</string>
+    <string name="confirm">Confirmer</string>
+    <string name="del_chk_title">Suppression des articles cochés</string>
+    <string name="del_chk_msg">Voulez-vous vraiment supprimer tous les articles cochés\u00A0?</string>
+    <string name="manage_categories">Liste des catégories</string>
+    <string name="manage_cat_title">Gérer les catégories</string>
+    <string name="empty_category_list">Supprimer les catégories non utilisées…</string>
+    <string name="category_hint">Catégorie</string>
+    <string name="new_cat_title">Ajouter une nouvelle catégorie</string>
+    <string name="new_cat_msg">Quelle catégorie voulez-vous ajouter\u00A0?</string>
+    <string name="entry_already_exists">L\'élément saisi existe déjà\u00A0!</string>
+    <string name="cat_used_toast">Impossible de supprimer : la catégorie est utilisée dans la liste de courses</string>
+    <string name="cant_del_used_cat">Impossible de supprimer une catégorie utilisée par une autre liste.</string>
+    <string name="edit_cat_title">Éditer la catégorie</string>
+    <string name="is_not_int">Quantité non valide\u00A0!</string>
+    <string name="usual_list_title">Liste habituelle</string>
+    <string name="already_in_slist_title">L\'article existe également dans la liste de courses</string>
+    <string name="already_in_slist_msg">Voulez-vous y mettre également à jour cet article\u00A0?</string>
+    <string name="art_put_in_slist">Article placé dans la liste de courses.</string>
+    <string name="art_del_from_slist">Article retiré de la liste de courses.</string>
+    <string name="no">Non</string>
+    <string name="sort_bycat_button">Par catégorie</string>
+    <string name="sort_byitem_button">Par article</string>
+    <string name="add_all_to_shopping_list">Tout ajouter à la liste de courses</string>
+    <string name="already_all_in_slist">Il ne reste aucun article à ajouter à la liste de courses.</string>
+    <string name="item_put_in_cart">Article placé dans le caddie.</string>
+    <string name="item_del_from_cart">Article retiré du caddie.</string>
+    <string name="yes">Oui</string>
+    <string name="cat_fragment">CategoryFragment</string>
+    <string name="usual_fragment">UsualFragment</string>
+    <string name="drawer_fragment">Drawer Fragment</string>
+    <string name="edit_cat_message">Remplacer le nom de la catégorie par\u00A0:</string>
+    <string name="cant_del_all_used">Toutes les catégories sont actuellement utilisées dans une autre liste.</string>
+    <string name="prmpt_del_unused_title">Suppression des catégories non utilisées</string>
+    <string name="prmpt_del_unused_msg">Voulez-vous vraiment supprimer toutes les catégories non utilisées\u00A0?</string>
+    <string name="back_to_shopping_list">&lt; Liste de courses</string>
+    <string name="cant_propagate">Impossible de propager\u00A0: l\'article tel que mis à jour existe déjà dans la liste de courses.</string>
+    <string name="send_list_via_sms">Envoyer le reste par SMS…</string>
+    <string name="sens_sms_title">Envoi par SMS\u00A0?</string>
+    <string name="sens_sms_msg">Vous allez être redirigé⸱e vers votre appli d\'envoi de SMS.</string>
+    <string name="sms_no_data_to_send">Aucune donnée à envoyer\u00A0!</string>
+    <string name="sort_custom">Personnalisé</string>
+    <string name="sort_alpha">Alphabétique</string>
+    <string name="warning_activate_custom">La liste est triée par ordre alphabétique. Pour activer le glisser-déposer, choisissez Tri personnalisé.</string>
+    <string name="dismiss_snackbar">J\'ai compris</string>
+    <string name="item_deleted_info">L\'article %1$s a été supprimé.</string>
+    <string name="cat_deleted_info">La catégorie %1$s a été supprimée.</string>
+    <string name="language">Langue</string>
+    <string name="en_lg_title">EN</string>
+    <string name="fr_lg_title">FR</string>
+    <string-array name="unit_array">
+        <item></item>
+        <item>kg</item>
+        <item>g</item>
+        <item>paquet(s)</item>
+        <item>L</item>
+        <item>mL</item>
+    </string-array>
+    <string-array name="pre_pop_cat">
+        <item>Divers</item>
+        <item>Fruits et légumes</item>
+        <item>Viande</item>
+        <item>Poisson</item>
+        <item>Boulangerie/Pâtisserie</item>
+        <item>Produits frais</item>
+        <item>Produits surgelés</item>
+        <item>Fruits secs, noix et graines</item>
+        <item>Biscuits</item>
+        <item>Épicerie sucrée</item>
+        <item>Céréales</item>
+        <item>Conserves</item>
+        <item>Ingrédients pour cuisiner</item>
+        <item>Produits du monde</item>
+        <item>Hygiène et beauté</item>
+        <item>Desserts</item>
+        <item>Animaux</item>
+        <item>Électroménager</item>
+        <item>Bricolage</item>
+        <item>Entretien et nettoyage</item>
+        <item>Bébé</item>
+        <item>En-cas</item>
+        <item>Jardin</item>
+        <item>Loisirs</item>
+        <item>Boissons</item>
+    </string-array>
+    <string-array name="pre_pop_item">
+        <item>Pain complet</item>
+        <item>Boulangerie/Pâtisserie</item>
+        <item>500 g</item>
+    </string-array>
+</resources>

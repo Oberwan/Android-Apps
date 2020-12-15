@@ -14,13 +14,17 @@ import com.example.shoppinglist.db.ShoppingItem
 import com.google.android.material.snackbar.Snackbar
 import java.lang.IllegalStateException
 import java.lang.StringBuilder
+import java.util.*
 
 const val ALREADY_EXISTS = 2
 const val VALID = 1
 const val EMPTY_STRING = 0
 const val INVALID_NUMBER = -1
 
-const val DEFAULT_CATEGORY = "Misc."
+const val DEFAULT_CATEGORY_EN = "Misc."
+const val DEFAULT_CATEGORY_FR = "Divers"
+const val SMS_HEADER_EN = "Shopping List:"
+const val SMS_HEADER_FR = "Liste des courses :"
 
 //items and usual items are sorted by category or alphabetically
 const val SORT_BY_CAT = 0
@@ -101,8 +105,10 @@ fun formatState(foundItem: Boolean, name:String, category: String, quantity:Stri
  */
 fun shapeSMS(itemList: List<ShoppingItem>?) : String{
     val sms = StringBuilder()
+    val smsHeader = if (Locale.getDefault().language == Locale("fr").language)
+        SMS_HEADER_FR else SMS_HEADER_EN
     itemList?.let { wholeList ->
-        sms.appendLine("Shopping List:")
+        sms.appendLine(smsHeader)
         if (sortType == SORT_BY_CAT) {
             wholeList.groupBy { it.category }.forEach { (cat, list) ->
                 sms.appendLine("** $cat **")

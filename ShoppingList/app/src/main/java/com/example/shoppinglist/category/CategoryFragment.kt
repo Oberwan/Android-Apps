@@ -97,7 +97,7 @@ class CategoryFragment : FragmentWithDialog() {
 
         categoryViewModel.lastDeleted.observe(viewLifecycleOwner, Observer {
             it?.let {
-                generateUndoSnackbar("Category ${it.categoryId} has been deleted", categoryViewModel)
+                generateUndoSnackbar(getString(R.string.cat_deleted_info, it.categoryId), categoryViewModel)
             }
         })
 
