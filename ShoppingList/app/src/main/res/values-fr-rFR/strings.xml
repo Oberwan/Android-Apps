@@ -82,20 +82,21 @@
     <string name="language">Langue</string>
     <string name="en_lg_title">EN</string>
     <string name="fr_lg_title">FR</string>
-    <string name="shopping_tutorial"><![CDATA[<p><b><cite>C\'est ici que vous saisissez votre liste de courses.<cite></b></p><br>
-<p>Pour ajouter un article, appuyez sur le bouton <b>+</b> (déplaçable) en bas à droite de l\'écran. Appuyez sur <b>Éditer</b> pour modifier l\'article.</p><br>
-        <p>Pendant vos courses, <b>cochez</b> les articles que vous ajoutez au caddie pour voir clairement ce qu\'il vous reste à trouver. À partir du menu, vous pouvez <b>Supprimer les articles cochés</b>. Sinon, vous pouvez aussi faire <b>glisser</b> un article pour le supprimer.</p><br>
-        <p>Saisissez vos achats récurrents dans la <b>Liste habituelle</b>, accessible dans le menu&nbsp;: elle vous évitera de saisir chaque semaine les mêmes articles.</p><br>
-        <p>Un article est lié à une catégorie, qui représente un rayon du magasin. Vous pouvez créer une catégorie à la volée ou dans la <b>Liste des catégories</b>, accessible dans le menu. Vous pourrez y mettre les catégories dans le <b>même ordre</b> que dans votre magasin&nbsp;!</p><br>
-        <p>Si vous ne trouvez pas tous les articles de votre liste, vous pouvez <b>envoyer les articles non cochés par SMS</b> à la bonne âme qui s\'en chargera.</p>]]></string>
-    <string name="category_tutorial"><![CDATA[<p><b>C\'est ici que vous saisissez les catégories auxquelles sont liés vos articles.</b></p><br>
-<p>Appuyez sur le bouton <b>+</b> (déplaçable) en bas à droite pour ajouter une catégorie, sur <b>Éditer</b> pour modifier une catégorie, ou faites <b>glisser</b> horizontalement une catégorie pour la supprimer.</p><br>
-<p>Par défaut, le <b>tri</b> est personnalisé&nbsp;: vous pouvez <b>glisser-déposer</b> (verticalement) vos catégories pour les positionner dans le <b>même ordre</b> que dans votre magasin&nbsp;!</p><br>
-<p>Depuis le menu, vous pouvez <b>Supprimer les catégories non utilisées</b>&nbsp;: si une catégorie est utilisée par un article dans une autre liste, elle ne peut pas être supprimée.</p>]]></string>
-    <string name="usual_tutorial"><![CDATA[<p><b>C\'est ici que vous saisissez les articles que vous achetez de manière récurrente.</b></p><br>
-<p>Cet écran est similaire à la liste de courses, à ceci près que lorsque vous <b>cochez</b> un article, il est <b><i>ajouté à la liste de courses</i></b>.</p>
-<p><b>Décochez-le</b> pour le retirer de la liste de courses.</p><br>
-<p>Depuis le menu, vous pouvez <b>ajouter tous les articles habituels</b> à votre liste de courses, ou <b>effacer la liste habituelle</b>.</p>]]></string>
+    <string name="shopping_tutorial"><![CDATA[<p><b><h4>C\'est ici que vous saisissez votre liste de courses.</h4></b></p>
+<h6>Ajouter/éditer un article</h6><p>Pour <b>ajouter un article</b>, appuyez sur le bouton <b>+</b> (déplaçable) en bas à droite de l\'écran.</p><p>Ou bien, si vous comptez acheter cette article de manière régulière,
+saisissez-le dans la <b><u>Liste habituelle</u></b>, accessible dans le menu&nbsp;: il vous suffira d\'y cocher un article pour l\'ajouter à la liste de courses. Pour modifier un article, appuyez sur <b>Éditer</b>.</p><br>
+<h6>Liste des catégories</h6><p>Un article est lié à une catégorie, qui représente un rayon du magasin. Vous pouvez créer une catégorie à la volée ou dans la <b><u>Liste des catégories</u></b>, accessible dans le menu. Vous pourrez y mettre les catégories dans le <b>même ordre</b> que dans votre magasin&nbsp;!</p><br>
+<h6>Cocher/supprimer des articles</h6><p>Pendant vos courses, <b>cochez</b> les articles que vous ajoutez au caddie pour voir clairement ce qu\'il vous reste à trouver. À partir du menu, vous pouvez <b>Supprimer les articles cochés</b> après vos courses. Sinon, vous pouvez aussi faire <b>glisser</b> un article pour le <b>supprimer</b>.</p><br>
+<h6>Envoi par SMS</h6><p>Si vous ne trouvez pas tous les articles de votre liste, vous pouvez <b>envoyer les articles non cochés par SMS</b> à la bonne âme qui s\'en chargera.</p>]]></string>
+    <string name="category_tutorial"><![CDATA[<p><b><h4>C\'est ici que vous saisissez les catégories auxquelles sont liés vos articles.</h4></b></p>
+<h6>Ajouter/éditer une catégorie</h6><p>Appuyez sur le bouton <b>+</b> (déplaçable) en bas à droite pour <b>ajouter</b> une catégorie, et sur <b>Éditer</b> pour la modifier.</p><br>
+<h6>Trier les catégories</h6><p>Par défaut, le <b>tri</b> est personnalisé&nbsp;: vous pouvez <b>glisser-déposer</b> (verticalement) vos catégories pour les positionner dans le <b>même ordre</b> que dans votre magasin&nbsp;!</p><br>
+<h6>Supprimer des catégories</h6><p>Depuis le menu, vous pouvez <b>Supprimer les catégories non utilisées</b>. Ou bien, faites <b>glisser</b> horizontalement une catégorie pour la <b>supprimer</b>.<br>
+<b>Attention</b>, si une catégorie est utilisée par un article dans une autre liste, elle ne peut pas être supprimée.</p>]]></string>
+    <string name="usual_tutorial"><![CDATA[<p><b><h4>C\'est ici que vous saisissez les articles à acheter régulièrement.</h4></b></p>
+<h6>Facilitez-vous la vie</h6><p>Cet écran est similaire à la liste de courses, à ceci près que lorsque vous <b>cochez</b> un article, il est <b><u>ajouté à la liste de courses</u></b>.</p>
+<p><b>Décochez</b> un article pour le <b>retirer</b> de la liste de courses.</p><br>
+<h6>Ajouter/supprimer toute la liste</h6><p>Depuis le menu, vous pouvez <b>ajouter tous les articles habituels</b> à votre liste de courses, ou <b>effacer la liste habituelle</b>.</p>]]></string>
     <string name="help_title">Aide</string>
     <string-array name="unit_array">
         <item></item>

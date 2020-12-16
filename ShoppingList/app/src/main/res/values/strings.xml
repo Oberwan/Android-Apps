@@ -81,22 +81,22 @@
     <string name="language">Language</string>
     <string name="en_lg_title">EN</string>
     <string name="fr_lg_title">FR</string>
-    <string name="shopping_tutorial"><![CDATA[<p><b><cite>This is the screen where you write your next shopping list.<cite></b></p><br>
-<p>Tap the (movable) <b>+</b> button in the bottom right corner to add an item, or its <b>Edit</b> button to modify it.</p><br>
-        <p>While shopping, <b>check</b> the items you\'ve added to your cart to see clearly what\'s left to look for. You can then choose to <b>Clear checked</b> items from your list. Alternatively, you can directly <b>swipe</b> an item to remove it.</p><br>
-        <p>As some items will likely be bought on a regular basis, be sure to type them in the <b>Usual List</b>, accessible from the top menu. From there, you can add your usual items to your shopping list whenever you want.</p><br>
-        <p>An item is bound to a category (i.e. store section). You can create a category on the fly or in the <b>Category List</b>, accessible from the top menu. Go there put the categories in the <b>same order</b> as your store\'s sections!</p><br>
-        <p>If you couldn\'t manage to buy everything you wanted, feel free to use the top menu to <b>send your unchecked items by SMS</b> to your rescuer.</p>]]></string>
-    <string name="category_tutorial"><![CDATA[<p><b>This is where you write the categories your items are bound to.</b></p><br>
-<p>Tap the <b>+</b> button in the bottom right corner to add a category, the <b>Edit</b> button to modify a category, or <b>swipe</b> to delete a category.</p><br>
-<p>By default, the <b>sorting type</b> is Custom, which means you can <b>drag and drop</b> your categories to match the order in your favorite store!</p><br>
-<p>From the options menu, you can <b>Delete unused categories</b>: if a category is used by an item in another list, it cannot be deleted.</p>]]></string>
-    <string name="usual_tutorial"><![CDATA[<p><b>This is where you write the items you intend to buy on a regular basis.</b></p><br>
-
-<p>It works in a similar way to the shopping list, but here, when you <b>check</b> an item, it is <b><i>added to your shopping list</i></b>.</p>
-<p><b>Uncheck</b> it to remove it from the shopping list.</p><br>
-
-<p>From the options menu, you can choose to <b>add all the usual items</b> to your shopping list, or <b>empty the Usual List</b>.</p>]]></string>
+    <string name="shopping_tutorial"><![CDATA[<p><b><h4>This is where you type your next shopping list.</h4></b></p>
+<h6>Add/Edit an item</h6><p>To <b>add</b> an item, tap the (movable) <b>+</b> button in the bottom right corner.</p>
+<p>Alternatively, if you plan to buy an item on a regular basis, be sure to type it in the <b><u>Usual List</u></b>, accessible from the top menu. From there, you can add your usual items to your shopping list whenever you want just by checking them.</p>
+ <p>To modify an item, tap the <b>Edit</b> button.</p><br>
+<h6>Category List</h6><p>An item is bound to a category (i.e. store section). You can create a category on the fly or in the <b><u>Category List</u></b>, accessible from the top menu. Go there to put the categories in the <b>same order</b> as your store\'s sections!</p><br>
+<h6>Check/delete items</h6><p>While shopping, <b>check</b> the items you\'ve added to your cart to clearly see what\'s left to look for. You can then choose to <b>Clear checked</b> items from your list. Alternatively, you can directly <b>swipe</b> an item to remove it.</p><br>
+<h6>Send via SMS</h6><p>If you couldn\'t manage to buy everything you wanted, feel free to use the top menu to <b>send your unchecked items by SMS</b> to your rescuer.</p>]]></string>
+    <string name="category_tutorial"><![CDATA[<p><b><h4>This is where you type the categories your items are bound to.</h4></b></p>
+<h6>Add/Edit a category</h6><p>Tap the <b>+</b> button in the bottom right corner to add a category. Tap the <b>Edit</b> button to modify a category.</p><br>
+<h6>Sort categories</h6><p>By default, the <b>sorting type</b> is Custom, which means you can <b>drag and drop</b> your categories to match the order in your favorite store!</p><br>
+<h6>Delete categories</h6><p>From the options menu, you can <b>Delete unused categories</b>. Alternatively, you can <b>swipe</b> a category to delete it.<br>
+<b>Note</b> that if a category is used by an item in another list, it cannot be deleted.</p>]]></string>
+    <string name="usual_tutorial"><![CDATA[<p><b><h4>This is where you type the items you intend to buy on a regular basis.</h4></b></p>
+<h6>It gets easier!</h6><p>This screen is similar to the shopping list, but here, when you <b>check</b> an item, it is <b><u>added to your shopping list</u></b>.</p>
+<p><b>Uncheck</b> an item to remove it from the shopping list.</p><br>
+<h6>Add/delete all items</h6><p>From the options menu, you can choose to <b>add all the usual items</b> to your shopping list, or <b>empty the Usual List</b>.</p>]]></string>
     <string name="help_title">Help</string>
     <string-array name="unit_array">
         <item></item>

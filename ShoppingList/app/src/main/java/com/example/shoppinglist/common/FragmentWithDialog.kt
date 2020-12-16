@@ -19,7 +19,6 @@ abstract class FragmentWithDialog : Fragment(){
     fun displayHelp(message: String){
         this.context?.let {
             dialog = AlertDialog.Builder(it)
-                .setTitle(getString(R.string.help_title))
                 .setMessage(HtmlCompat.fromHtml(
                     message,
                     HtmlCompat.FROM_HTML_SEPARATOR_LINE_BREAK_PARAGRAPH))
