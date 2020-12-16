@@ -1,7 +1,11 @@
 package com.example.shoppinglist.common
 
+import android.text.Html
 import androidx.appcompat.app.AlertDialog
+import androidx.core.text.HtmlCompat
 import androidx.fragment.app.Fragment
+import com.example.shoppinglist.R
+import com.example.shoppinglist.generateSnackbar
 
 /**
  * Superclass of all fragments in the app. It is just a Fragment with an AlertDialog object
@@ -10,6 +14,20 @@ import androidx.fragment.app.Fragment
 abstract class FragmentWithDialog : Fragment(){
 
     protected var dialog: AlertDialog? = null
+
+
+    fun displayHelp(message: String){
+        this.context?.let {
+            dialog = AlertDialog.Builder(it)
+                .setTitle(getString(R.string.help_title))
+                .setMessage(HtmlCompat.fromHtml(
+                    message,
+                    HtmlCompat.FROM_HTML_SEPARATOR_LINE_BREAK_PARAGRAPH))
+                .setNegativeButton(getString(R.string.ok), null)
+                .create()
+            dialog?.show()
+        }
+    }
 
     /**
      * This override is especially useful for cleanly dismissing any dialog trying to show

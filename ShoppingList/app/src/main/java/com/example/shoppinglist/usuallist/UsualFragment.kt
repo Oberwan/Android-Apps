@@ -167,6 +167,9 @@ class UsualFragment : BaseFragment(){
             R.id.action_add_all -> {
                 usualViewModel.transferRemainingItems()
             }
+            R.id.usual_help_menu -> {
+                displayHelp(getString(R.string.usual_tutorial))
+            }
         }
         return super.onOptionsItemSelected(menuItem)
     }

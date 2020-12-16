@@ -158,6 +158,9 @@ class CategoryFragment : FragmentWithDialog() {
                 }
                 return true
             }
+            R.id.category_help_menu -> {
+                displayHelp(getString(R.string.category_tutorial))
+            }
         }
         return super.onOptionsItemSelected(menuItem)
     }

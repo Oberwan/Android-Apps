@@ -164,6 +164,9 @@ class ItemFragment : BaseFragment() {
                 showDelDialog(false, R.string.del_chk_title, R.string.del_chk_msg)
                 return true
             }
+            R.id.shopping_help_menu -> {
+                displayHelp(getString(R.string.shopping_tutorial))
+            }
         }
         return super.onOptionsItemSelected(menuItem)
     }

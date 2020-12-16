@@ -33,6 +33,12 @@
         android:title="@string/empty_usual_list"
         app:showAsAction="never" />
 
+    <item
+        android:id="@+id/usual_help_menu"
+        android:title="@string/help_title"
+        android:orderInCategory="99"
+        app:showAsAction="never" />
+
 <!--    <item
         android:id="@+id/action_show_cat"
         android:checkable="true"

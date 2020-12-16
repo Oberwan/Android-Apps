@@ -27,4 +27,10 @@
         android:title="@string/empty_category_list"
         app:showAsAction="ifRoom" />
 
+    <item
+        android:id="@+id/category_help_menu"
+        android:title="@string/help_title"
+        android:orderInCategory="99"
+        app:showAsAction="never" />
+
 </menu>

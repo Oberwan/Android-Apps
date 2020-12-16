@@ -2,8 +2,8 @@
 <resources>
     <style name="ActionButtonStyle" parent="@android:style/Widget.Holo.Light.ActionButton">
         <item name="android:minWidth">0dip</item>
-        <item name="android:paddingStart">5dip</item>
-        <item name="android:paddingEnd">15dip</item>
+        <item name="android:paddingStart">15dip</item>
+        <item name="android:paddingEnd">5dip</item>
     </style>
 
 </resources>
