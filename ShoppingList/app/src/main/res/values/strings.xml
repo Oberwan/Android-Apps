@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Shopping List</string>
+    <string name="app_name">Shop\'List·e</string>
     <string name="main_fragment">MainFragment</string>
     <string name="add_art_btn">Add Item</string>
     <string name="add_art_msg">Add a new item</string>
@@ -85,12 +85,14 @@
 <h6>Add/Edit an item</h6><p>To <b>add</b> an item, tap the (movable) <b>+</b> button in the bottom right corner.</p>
 <p>Alternatively, if you plan to buy an item on a regular basis, be sure to type it in the <b><u>Usual List</u></b>, accessible from the top menu. From there, you can add your usual items to your shopping list whenever you want just by checking them.</p>
  <p>To modify an item, tap the <b>Edit</b> button.</p><br>
-<h6>Category List</h6><p>An item is bound to a category (i.e. store section). You can create a category on the fly or in the <b><u>Category List</u></b>, accessible from the top menu. Go there to put the categories in the <b>same order</b> as your store\'s sections!</p><br>
+<h6>Category List</h6><p>An item is bound to a category (i.e. store section). By default, items are <b>sorted by category</b>, each displayed in the same order as your category list.<br>
+You can create a category <b>on the fly</b>, by directly typing its name in the item creation/edit dialog, or in the <b><u>Category List</u></b>, accessible from the top menu. Go there to put the categories in the <b>same order</b> as your store\'s sections!</p><br>
 <h6>Check/delete items</h6><p>While shopping, <b>check</b> the items you\'ve added to your cart to clearly see what\'s left to look for. You can then choose to <b>Clear checked</b> items from your list. Alternatively, you can directly <b>swipe</b> an item to remove it.</p><br>
 <h6>Send via SMS</h6><p>If you couldn\'t manage to buy everything you wanted, feel free to use the top menu to <b>send your unchecked items by SMS</b> to your rescuer.</p>]]></string>
     <string name="category_tutorial"><![CDATA[<p><b><h4>This is where you type the categories your items are bound to.</h4></b></p>
 <h6>Add/Edit a category</h6><p>Tap the <b>+</b> button in the bottom right corner to add a category. Tap the <b>Edit</b> button to modify a category.</p><br>
-<h6>Sort categories</h6><p>By default, the <b>sorting type</b> is Custom, which means you can <b>drag and drop</b> your categories to match the order in your favorite store!</p><br>
+<h6>Sort categories</h6><p>By default, the <b>sorting type</b> is Custom, which means you can <b>drag and drop</b> your categories to match the order in your favorite store!
+To do so, keep you finger pressed against a category: when the latter is colored, you can drag it and release it where you want.</p><br>
 <h6>Delete categories</h6><p>From the options menu, you can <b>Delete unused categories</b>. Alternatively, you can <b>swipe</b> a category to delete it.<br>
 <b>Note</b> that if a category is used by an item in another list, it cannot be deleted.</p>]]></string>
     <string name="usual_tutorial"><![CDATA[<p><b><h4>This is where you type the items you intend to buy on a regular basis.</h4></b></p>

@@ -38,7 +38,6 @@ abstract class BaseViewModel(
     protected var swipeEnabled = true
 
     init {
-        Log.i("VIEWMODEL", "INIT CALLED")
         swipeEnabled = true
     }
 
