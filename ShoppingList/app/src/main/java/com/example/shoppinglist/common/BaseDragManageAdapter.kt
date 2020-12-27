@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.shoppinglist.RED_COLOR
+import com.example.shoppinglist.TRANSPARENT_COLOR
 import javax.security.auth.login.LoginException
 
 /**
@@ -40,7 +41,7 @@ class BaseDragManageAdapter(var viewModel: BaseViewModel, var adapter: ListAdapt
         super.onSelectedChanged(viewHolder, actionState)
 
         with(viewHolder?.itemView?.background){
-            if (this is ColorDrawable && this.color == Color.WHITE)
+            if (this is ColorDrawable && this.color == TRANSPARENT_COLOR)
                 viewHolder?.itemView?.setBackgroundColor(RED_COLOR)
         }
     }
@@ -57,7 +58,7 @@ class BaseDragManageAdapter(var viewModel: BaseViewModel, var adapter: ListAdapt
 
         with(viewHolder.itemView.background){
             if (this is ColorDrawable && this.color == RED_COLOR)
-                viewHolder.itemView.setBackgroundColor(Color.WHITE)
+                viewHolder.itemView.setBackgroundColor(TRANSPARENT_COLOR)
         }
     }
 

@@ -19,12 +19,12 @@
         android:padding="@dimen/art_padding">
 
 
+<!--        android:textColor="@color/black"-->
         <TextView
             android:id="@+id/category"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:textColor="@color/black"
             android:buttonTint="@color/blue_500"
             android:ellipsize="end"
             android:maxLines="1"

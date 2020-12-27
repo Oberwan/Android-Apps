@@ -39,6 +39,7 @@ var catSortType = SORT_CUSTOM
 
 const val RED_COLOR = 0xFFCF0000.toInt()
 const val TEAL_COLOR = 0xAA03DAC5.toInt()
+const val TRANSPARENT_COLOR = 0x00FFFFFF.toInt()
 
 //Replaced with Snackbar
 fun generateToast(context: Context, message: CharSequence?, longDuration: Boolean) {

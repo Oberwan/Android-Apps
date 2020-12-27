@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearSmoothScroller
 import androidx.recyclerview.widget.RecyclerView
 import com.example.shoppinglist.RED_COLOR
 import com.example.shoppinglist.TEAL_COLOR
+import com.example.shoppinglist.TRANSPARENT_COLOR
 import com.example.shoppinglist.db.Category
 import java.util.*
 
@@ -155,7 +156,7 @@ class CatDragManageAdapter(var categoryViewModel: CategoryViewModel, var adapter
                     CustomLinearSmoothScroller(recyclerView.context).apply { targetPosition = 0 })
         }
 
-        viewHolder.itemView.setBackgroundColor(Color.WHITE)
+        viewHolder.itemView.setBackgroundColor(TRANSPARENT_COLOR)
 
 //        try {
 //            Log.i(
