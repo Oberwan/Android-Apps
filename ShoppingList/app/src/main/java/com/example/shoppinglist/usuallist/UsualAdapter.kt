@@ -122,6 +122,15 @@ class UsualAdapter(private val viewModel: UsualViewModel)
         notifyNextUpdate = true
     }
 
+    /**
+     * Allows us to find an item to scroll to
+     */
+    fun findItemIndex(name: String, category: String): Int{
+        return currentList.indexOfFirst {
+            it.name == name && it.category == category
+        }
+    }
+
 
 
     class ViewHolder private constructor(val binding: UsualItemBinding):

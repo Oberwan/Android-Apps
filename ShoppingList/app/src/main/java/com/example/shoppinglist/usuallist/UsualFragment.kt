@@ -36,6 +36,9 @@ class UsualFragment : BaseFragment(){
         val binding : FragmentUsualListBinding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_usual_list, container, false
         )
+        binding.lifecycleOwner = this
+
+        itemRecyclerView = binding.usualList
 
         // Set subtitle of screen
         (activity as AppCompatActivity?)!!.supportActionBar!!.subtitle = getString(R.string.usual_list_title)
@@ -43,7 +46,6 @@ class UsualFragment : BaseFragment(){
         // Enable options menu creation
         setHasOptionsMenu(true)
 
-        binding.lifecycleOwner = this
 
         val application = requireNotNull(this.activity).application
         val dataSource = ItemDatabase.getInstance(application).itemDatabaseDao
@@ -252,14 +254,19 @@ class UsualFragment : BaseFragment(){
                                 val result = usualViewModel.createOrUpdate(isNew, currentItem,
                                     newName, newCategory, newQuantity)
                                 result?.let {
-                                    if (!result)
+                                    if (!result){
+                                        smoothScrollTo(adapter.findItemIndex(newName, newCategory))
                                         generateSnackbar(getString(R.string.entry_already_exists), false)
+                                    }
                                 }?: alertPropagate(currentItem,
                                         newName, newCategory, newQuantity) //if previous version was in the Shopping list, suggest to update matching item
                             }
                             EMPTY_STRING -> generateSnackbar(getString(R.string.pls_non_empty), false)//generateToast(it, getString(R.string.pls_non_empty), false)
                             INVALID_NUMBER -> generateSnackbar(getString(R.string.is_not_int), false)
-                            ALREADY_EXISTS -> generateSnackbar(getString(R.string.entry_already_exists), false)
+                            ALREADY_EXISTS -> {
+                                smoothScrollTo(adapter.findItemIndex(newName, newCategory))
+                                generateSnackbar(getString(R.string.entry_already_exists), false)
+                            }
                         }
                     }
                     .setNegativeButton(getString(R.string.prmpt_cancel), null)

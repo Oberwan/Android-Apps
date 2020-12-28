@@ -127,6 +127,15 @@ class ItemAdapter(private val viewModel: ItemViewModel)
     }
 
 
+    /**
+     * Allows us to find an item to scroll to
+     */
+    fun findItemIndex(name: String, category: String): Int{
+        return currentList.indexOfFirst {
+            it.name == name && it.category == category
+        }
+    }
+
     class ViewHolder private constructor(val binding: ShoppingItemBinding):
         RecyclerView.ViewHolder(binding.root){
 

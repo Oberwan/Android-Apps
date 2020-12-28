@@ -3,7 +3,6 @@ package com.example.shoppinglist.mainlist
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.*
 import android.widget.*
 import androidx.activity.OnBackPressedCallback
@@ -14,6 +13,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.ItemTouchHelper
+import androidx.recyclerview.widget.LinearSmoothScroller
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.shoppinglist.*
@@ -37,6 +37,8 @@ class ItemFragment : BaseFragment() {
                 inflater, R.layout.fragment_shopping_list, container, false
         )
         binding.lifecycleOwner = this
+
+        itemRecyclerView = binding.shoppingList
 
         // Set subtitle of screen
         (activity as AppCompatActivity?)!!.supportActionBar!!.subtitle = ""
@@ -263,16 +265,18 @@ class ItemFragment : BaseFragment() {
                         when (itemViewModel.itemFormatState(newName, newCategory, newQuantity, newUnit)) {
                             VALID -> { // valid format: entry is created or updated
                                 if (newUnit != "") newQuantity += " $newUnit"
-//                                if (sortType == SORT_BY_CAT) adapter.onUpdateUpcoming()
                                 if (!itemViewModel.createOrUpdate(isNew, currentItem,
                                         newName, newCategory, newQuantity)){
-//                                    if (sortType == SORT_BY_CAT) adapter.cancelOnUpdateUpcoming() //entry won't be created, so no need to notify adapter
+                                    smoothScrollTo(adapter.findItemIndex(newName, newCategory))
                                     generateSnackbar(getString(R.string.entry_already_exists), false)
                                 }
                             }
                             EMPTY_STRING -> generateSnackbar(getString(R.string.pls_non_empty), false)
                             INVALID_NUMBER -> generateSnackbar(getString(R.string.is_not_int), false)
-                            ALREADY_EXISTS -> generateSnackbar(getString(R.string.entry_already_exists), false)
+                            ALREADY_EXISTS -> {
+                                smoothScrollTo(adapter.findItemIndex(newName, newCategory))
+                                generateSnackbar(getString(R.string.entry_already_exists), false)
+                            }
                         }
                     }
                     .setNegativeButton(getString(R.string.prmpt_cancel), null)
@@ -286,6 +290,7 @@ class ItemFragment : BaseFragment() {
 
         }
     }
+
 
     private fun sendSMS(sms: String){
         val intent = Intent(Intent.ACTION_VIEW).apply {

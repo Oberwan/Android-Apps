@@ -5,11 +5,32 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import android.widget.TextView
+import androidx.recyclerview.widget.LinearSmoothScroller
+import androidx.recyclerview.widget.RecyclerView
 import com.example.shoppinglist.R
 import java.util.ArrayList
 
 abstract class BaseFragment : FragmentWithDialog() {
 
+    /**
+     * We'll need to keep track of the recycler view in the event where we have to scroll programmatically
+     */
+    open lateinit var itemRecyclerView: RecyclerView
+
+    protected fun smoothScrollTo(scrollToPosition: Int) {
+        itemRecyclerView.layoutManager?.startSmoothScroll(
+            object : LinearSmoothScroller(context) {
+                //scrolling is a bit quick: slow it down a notch
+                override fun calculateTimeForScrolling(dx: Int): Int {
+                    return super.calculateTimeForScrolling(dx) * 5
+                }
+
+                //get to the top of the list item
+                override fun getVerticalSnapPreference(): Int {
+                    return SNAP_TO_START;
+                }
+            }.apply { targetPosition = scrollToPosition })
+    }
 
     /**
      * Populate a spinner with values existing in the Category table
